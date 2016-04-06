@@ -54,6 +54,8 @@ namespace FlexEngine.NET
 		{
 			get
 			{
+				var growSum = _elements.OfType<FlexItem>().Select(i => i.Grow).Sum();
+				if (growSum == 0) return 1;
 				return AvailableSpace / _elements.OfType<FlexItem>().Select(i => i.Grow).Sum();
 			}
 		}

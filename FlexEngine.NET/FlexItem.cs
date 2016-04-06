@@ -55,6 +55,14 @@ namespace FlexEngine.NET
 			}
 		}
 
+		public double Right
+		{
+			get
+			{
+				return Left + FlexItemSize;
+			}
+		}
+
 		public double ShrinkFactor
 		{
 			get
